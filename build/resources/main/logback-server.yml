@@ -2,4 +2,3 @@
 log.config.path: /root/logs
 #로그파일 이름
 log.config.filename: server_log
-

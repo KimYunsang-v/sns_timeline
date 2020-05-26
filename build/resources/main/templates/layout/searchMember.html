@@ -10,8 +10,8 @@
 </head>
 
 <body>
-<!-- Header Section -->
-<header th:replace="fragments/commonHeader :: header"></header>
+    <!-- Header Section -->
+    <header th:replace="fragments/commonHeader :: header"></header>
 
     <!-- Page top Section end -->
     <section class="page-top-section set-bg" data-setbg="/resources/img/page-top-bg/4.jpg">
@@ -35,91 +35,85 @@
                     </div>
                 </div>
 
-        <div id="result" class="col-4" th:if="${memberDtoList} != null">
-            <div class="row" th:each="memberDto, i : ${memberDtoList}">
-                <div class="icon-box-item">
-                    <form th:action="@{/subscribe}" th:object=${subscribeDto} method="post">
-                    <input type="hidden" name="id" th:value="${memberDto.getId()}"/>
-                    <input type="hidden" name="search" th:value="${search}"/>
-                    <input type="hidden" name="page" th:value="${memberDtoList.getPageable().getPageNumber()}"/>
-                    <input type="hidden" name="subscribed" th:value="${memberDto.isSubscribed()}"/>
-                    <button class="ib-icon btn" type="submit">
-                        <i th:if="${!memberDto.isSubscribed()}" class="flaticon-004-assistance"></i>
-                        <i th:if="${memberDto.isSubscribed()}" class="flaticon-003-like"></i>
-                    </button>
-                </form>
+                <div id="result" class="col-6" th:if="${memberDtoList} != null">
+                    <div class="row" th:each="memberDto, i : ${memberDtoList}">
+                        <div class="icon-box-item">
+                            <form th:action="@{/subscribe}" th:object=${subscribeDto} method="post">
+                                <input type="hidden" name="id" th:value="${memberDto.getId()}"/>
+                                <input type="hidden" name="search" th:value="${search}"/>
+                                <input type="hidden" name="page" th:value="${memberDtoList.getPageable().getPageNumber()}"/>
+                                <input type="hidden" name="subscribed" th:value="${memberDto.isSubscribed()}"/>
+                                <button class="ib-icon btn" type="submit">
+                                    <i th:if="${!memberDto.isSubscribed()}" class="flaticon-004-assistance"></i>
+                                    <i th:if="${memberDto.isSubscribed()}" class="flaticon-003-like"></i>
+                                </button>
+                            </form>
 
-                    <div class="col">
-                        <div class="row ib-text" th:text="${memberDto.getEmail()}"></div>
-                        <div class="row ib-text" th:text="${memberDto.getName()}"></div>
+                            <div class="col" style="width: 380px">
+                                <div class="row ib-text" th:text="${memberDto.getEmail()}" style="margin: 0; width: 250px;"></div>
+                                <div class="row ib-text" th:text="${memberDto.getName()}"></div>
+                            </div>
+                        </div>
                     </div>
-<!--                        <h4>-->
-<!--                            <div th:text="${memberDto.getEmail()}" th:remove="tag">Email</div>-->
-<!--                            <br/>-->
-<!--                            <small th:text="${memberDto.getName()}" >Name</small>-->
-<!--                        </h4>-->
 
+                    <nav class="site-pagination" th:if="${memberDtoList.getTotalPages() > 1}">
+                        <ul class="pagination" th:with="start=${start}, last=${last}">
+                            <li>
+                                <a th:href="@{/search/member/do(search = ${search},page=1)}" aria-label="First">
+                                    <span aria-hidden="true">First</span>
+                                </a>
+                            </li>
+
+                            <li th:class="${memberDtoList.first} ? 'disabled'">
+                                <a th:href="@{/search/member/do(search = ${search}, page=${memberDtoList.getPageable().getPageNumber()})}"
+                                   aria-label="Previous">
+                                    <span aria-hidden="true">&lt;</span>
+                                </a>
+                            </li>
+
+                            <li th:each="page: ${#numbers.sequence(start, last)}"
+                                th:class="${page == memberDtoList.getPageable().getPageNumber() + 1} ? 'active'">
+                                <a th:text="${page}" th:href="@{/search/member/do(search = ${search}, page=${page})}"></a>
+                            </li>
+
+                            <li th:class="${memberDtoList.last} ? 'disabled'">
+                                <a th:href="@{/search/member/do(search = ${search}, page=${memberDtoList.getPageable().getPageNumber()+2})}"
+                                   aria-label="Next">
+                                    <span aria-hidden="true">></span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a th:href="@{/search/member/do(search = ${search},page = ${memberDtoList.getTotalPages()})}" aria-label="Last">
+                                    <span aria-hidden="true">Last</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
             </div>
-
-            <nav class="site-pagination" th:if="${memberDtoList.getTotalPages() > 1}">
-                <ul class="pagination" th:with="start=${start}, last=${last}">
-                    <li>
-                        <a th:href="@{/search/member/do(search = ${search},page=1)}" aria-label="First">
-                            <span aria-hidden="true">First</span>
-                        </a>
-                    </li>
-
-                    <li th:class="${memberDtoList.first} ? 'disabled'">
-                        <a th:href="@{/search/member/do(search = ${search}, page=${memberDtoList.getPageable().getPageNumber()})}"
-                           aria-label="Previous">
-                            <span aria-hidden="true">&lt;</span>
-                        </a>
-                    </li>
-
-                    <li th:each="page: ${#numbers.sequence(start, last)}"
-                        th:class="${page == memberDtoList.getPageable().getPageNumber() + 1} ? 'active'">
-                        <a th:text="${page}" th:href="@{/search/member/do(search = ${search}, page=${page})}"></a>
-                    </li>
-
-                    <li th:class="${memberDtoList.last} ? 'disabled'">
-                        <a th:href="@{/search/member/do(search = ${search}, page=${memberDtoList.getPageable().getPageNumber()+2})}"
-                           aria-label="Next">
-                            <span aria-hidden="true">></span>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a th:href="@{/search/member/do(search = ${search},page = ${memberDtoList.getTotalPages()})}" aria-label="Last">
-                            <span aria-hidden="true">Last</span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
         </div>
         </div>
-    </div>
-    </div>
-</section>
+    </section>
 
-<!--====== Javascripts & Jquery ======-->
-<script src="/resources/js/jquery-3.2.1.min.js"></script>
-<script src="/resources/js/bootstrap.min.js"></script>
-<script src="/resources/js/jquery.slicknav.min.js"></script>
-<script src="/resources/js/owl.carousel.min.js"></script>
-<script src="/resources/js/jquery-ui.min.js"></script>
-<script src="/resources/js/main.js"></script>
+    <!--====== Javascripts & Jquery ======-->
+    <script src="/resources/js/jquery-3.2.1.min.js"></script>
+    <script src="/resources/js/bootstrap.min.js"></script>
+    <script src="/resources/js/jquery.slicknav.min.js"></script>
+    <script src="/resources/js/owl.carousel.min.js"></script>
+    <script src="/resources/js/jquery-ui.min.js"></script>
+    <script src="/resources/js/main.js"></script>
 
-<script type="text/javascript" th:inline="javascript">
-    /* <![CDATA[ */
-    const isNull = /*[[${isNull}]]*/ false;
+    <script type="text/javascript" th:inline="javascript">
+        /* <![CDATA[ */
+        const isNull = /*[[${isNull}]]*/ false;
 
-    $(document).ready(function () {
-        if(isNull) {
-            alert("검색 결과가 없습니다.");
-        }
-    });
-    /* ]]> */
-</script>
+        $(document).ready(function () {
+            if(isNull) {
+                alert("검색 결과가 없습니다.");
+            }
+        });
+        /* ]]> */
+    </script>
 </body>
 </html>

@@ -2,16 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aa7fbbbd-97ba-4060-99c9-cd0713339aa8" name="sns_timeline_2-96 [윤상&amp;지우] 코드 최적화 &amp; 디테일한 기능 추가" comment="- add images path">
+      <change beforePath="$PROJECT_DIR$/.gradle/6.3/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.3/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.3/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.3/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.3/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
-    <list id="28d9b496-534a-4a95-92e3-966a82bea66d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/hackday/sns_timeline/sign/service/SignService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/hackday/sns_timeline/sign/service/SignService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/logback-server.yml" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/logback-server.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/logback-spring.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/logback-spring.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/layout/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/layout/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/resources/main/templates/layout/searchMember.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/layout/searchMember.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/hackday/sns_timeline/subscribe/SubscribeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/hackday/sns_timeline/subscribe/SubscribeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/logback-spring.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/logback-spring.xml" afterDir="false" />
     </list>
+    <list id="28d9b496-534a-4a95-92e3-966a82bea66d" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -486,6 +493,7 @@
       <branch name="yunsang_jiwoo" repository="C:\Users\qwdbs\Desktop\spring\sns_timeline" original="true" />
       <branch name="sns_timeline_2-96" repository="C:\Users\qwdbs\Desktop\spring\sns_timeline" />
       <changelist id="aa7fbbbd-97ba-4060-99c9-cd0713339aa8" name="sns_timeline_2-96 [윤상&amp;지우] 코드 최적화 &amp; 디테일한 기능 추가" comment="" />
+      <option name="closed" value="true" />
       <created>1589946676000</created>
       <option name="issue" value="true" />
       <url>https://github.com/2020-NAVER-CAMPUS-HACKDAY/sns_timeline_2/issues/96</url>
@@ -493,9 +501,10 @@
       <option name="presentableId" value="sns_timeline_2-96" />
       <option name="project" value="sns_timeline_2" />
       <option name="type" value="BUG" />
-      <updated>1590051023477</updated>
+      <updated>1590075285000</updated>
       <workItem from="1589979302388" duration="33611000" />
       <workItem from="1590107575101" duration="8506000" />
+      <workItem from="1590533822512" duration="2075000" />
     </task>
     <task id="LOCAL-00008" summary="- 배포 yml 설정">
       <created>1590064371762</created>
@@ -667,10 +676,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="205" y="71" width="1228" height="685" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1590062815836" />
-    <state x="549" y="168" key="FileChooserDialogImpl" timestamp="1589815015235">
+    <state x="549" y="168" key="FileChooserDialogImpl" timestamp="1590533868693">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="168" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1589815015235" />
+    <state x="549" y="168" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1590533868693" />
     <state x="478" y="117" width="580" height="427" key="Github.CreatePullRequestDialog" timestamp="1589466638294">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -679,38 +688,38 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="639" y="303" width="520" height="273" key="Github.ShareDialog/0.0.1536.824@0.0.1536.824" timestamp="1589103222537" />
-    <state width="1493" height="481" key="GridCell.Tab.0.bottom" timestamp="1590063468320">
+    <state width="1493" height="355" key="GridCell.Tab.0.bottom" timestamp="1590536681398">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="481" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1590063468320" />
-    <state width="1493" height="481" key="GridCell.Tab.0.center" timestamp="1590063468320">
+    <state width="1493" height="355" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1590536681398" />
+    <state width="1493" height="355" key="GridCell.Tab.0.center" timestamp="1590536681398">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="481" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1590063468320" />
-    <state width="1493" height="481" key="GridCell.Tab.0.left" timestamp="1590063468319">
+    <state width="1493" height="355" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1590536681398" />
+    <state width="1493" height="355" key="GridCell.Tab.0.left" timestamp="1590536681397">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="481" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1590063468319" />
-    <state width="1493" height="481" key="GridCell.Tab.0.right" timestamp="1590063468320">
+    <state width="1493" height="355" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1590536681397" />
+    <state width="1493" height="355" key="GridCell.Tab.0.right" timestamp="1590536681398">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="481" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1590063468320" />
-    <state width="1493" height="481" key="GridCell.Tab.1.bottom" timestamp="1590063468321">
+    <state width="1493" height="355" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1590536681398" />
+    <state width="1493" height="355" key="GridCell.Tab.1.bottom" timestamp="1590536681400">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="481" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1590063468321" />
-    <state width="1493" height="481" key="GridCell.Tab.1.center" timestamp="1590063468321">
+    <state width="1493" height="355" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1590536681400" />
+    <state width="1493" height="355" key="GridCell.Tab.1.center" timestamp="1590536681399">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="481" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1590063468321" />
-    <state width="1493" height="481" key="GridCell.Tab.1.left" timestamp="1590063468320">
+    <state width="1493" height="355" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1590536681399" />
+    <state width="1493" height="355" key="GridCell.Tab.1.left" timestamp="1590536681399">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="481" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1590063468320" />
-    <state width="1493" height="481" key="GridCell.Tab.1.right" timestamp="1590063468321">
+    <state width="1493" height="355" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1590536681399" />
+    <state width="1493" height="355" key="GridCell.Tab.1.right" timestamp="1590536681400">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="481" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1590063468321" />
+    <state width="1493" height="355" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1590536681400" />
     <state width="1493" height="343" key="GridCell.Tab.2.bottom" timestamp="1589454180917">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -751,10 +760,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="505" y="228" key="SimpleOpenTaskDialog/0.0.1536.824@0.0.1536.824" timestamp="1589898982661" />
-    <state x="361" y="146" key="Vcs.Push.Dialog.v2" timestamp="1590115619407">
+    <state x="361" y="146" key="Vcs.Push.Dialog.v2" timestamp="1590391319916">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="146" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1590115619407" />
+    <state x="361" y="146" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1590391319916" />
     <state x="345" y="59" key="com.intellij.dvcs.ui.CompareBranchesDialog" timestamp="1589287984229">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

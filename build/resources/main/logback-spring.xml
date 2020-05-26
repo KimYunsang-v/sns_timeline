@@ -75,26 +75,25 @@
 
         <!-- root레벨 설정 -->
         <root level="${LOG_LEVEL}">
-            <appender-ref ref="CONSOLE"/>
             <appender-ref ref="FILE"/>
             <appender-ref ref="Error"/>
         </root>
     </springProfile>
 
 
-    <springProfile name="yunsang">
+    <springProfile name="dev">
         <!-- root레벨 설정 -->
         <root level="${LOG_LEVEL}">
             <appender-ref ref="CONSOLE"/>
         </root>
     </springProfile>
 
-    <springProfile name="jiwoo">
-        <!-- root레벨 설정 -->
-        <root level="${LOG_LEVEL}">
-            <appender-ref ref="CONSOLE"/>
-        </root>
-    </springProfile>
+<!--    <springProfile name="jiwoo">-->
+<!--        &lt;!&ndash; root레벨 설정 &ndash;&gt;-->
+<!--        <root level="${LOG_LEVEL}">-->
+<!--            <appender-ref ref="CONSOLE"/>-->
+<!--        </root>-->
+<!--    </springProfile>-->
 
     <!--Environment 내의 프로퍼티들을 개별적으로 설정할 수도 있다.-->
 <!--    <springProperty scope="context" name="LOG_LEVEL" source="logging.level.root"/>-->
