@@ -58,6 +58,7 @@ public class SignService implements UserDetailsService {
 			throw new DuplicationException("member id already exist");
 		}
 
+		// roll back 구현 해야함
 		searchMemberDocRepository.save(
 			SearchMemberDoc.builder()
 			.email(member.getEmail())
