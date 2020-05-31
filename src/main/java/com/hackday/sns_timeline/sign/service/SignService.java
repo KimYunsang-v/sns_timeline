@@ -75,6 +75,7 @@ public class SignService implements UserDetailsService {
 			.orElseThrow(() -> new RepositoryNullException("memberRepository error"));
 		memberRepository.delete(member);
 
+
 		SearchMemberDoc searchMemberDoc = searchMemberDocRepository.findByMemberId(member.getId())
 			.orElseThrow(() -> new RepositoryNullException("memberRepository error"));
 
