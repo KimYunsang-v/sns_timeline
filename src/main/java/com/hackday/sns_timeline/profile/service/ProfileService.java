@@ -3,6 +3,9 @@ package com.hackday.sns_timeline.profile.service;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import javax.sql.DataSource;
+
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
