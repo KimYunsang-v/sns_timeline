@@ -17,7 +17,6 @@ public class ThymeleafViewResolverConfig {
 	@Value("${spring.thymeleaf.cache}")
 	private boolean isCache;
 
-	// 템플릿 리졸버 빈 등록
 	@Bean
 	public SpringResourceTemplateResolver templateResolver() {
 		SpringResourceTemplateResolver templateResolver = new SpringResourceTemplateResolver();
@@ -29,7 +28,6 @@ public class ThymeleafViewResolverConfig {
 		return templateResolver;
 	}
 
-	// 템플릿 엔진 빈 등록
 	@Bean
 	public SpringTemplateEngine templateEngine(MessageSource messageSource) {
 		SpringTemplateEngine templateEngine = new SpringTemplateEngine();
@@ -40,7 +38,6 @@ public class ThymeleafViewResolverConfig {
 		return templateEngine;
 	}
 
-	// 뷰 리졸버 빈 등록
 	@Bean
 	@Autowired
 	public ViewResolver viewResolver(MessageSource messageSource) {
@@ -51,8 +48,6 @@ public class ThymeleafViewResolverConfig {
 		return viewResolver;
 	}
 
-	// 시큐리티 방언 사용을 위해서 빈 등록
-	// 템플릿 엔진 빈 등록 시 사용됨
    @Bean
    public SpringSecurityDialect securityDialect() {
 	   return new SpringSecurityDialect();
