@@ -24,4 +24,5 @@ public interface MemberRepository extends JpaRepository<Member, Long> {
 
 	@Query(value = "select Max(member.id) from member member", nativeQuery = true)
 	Long findMaxId();
+
 }
